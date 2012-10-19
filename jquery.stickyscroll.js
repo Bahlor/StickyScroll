@@ -65,11 +65,12 @@
         }
 
         return this.each(function(index) {
-
-          var el = $(this),
-            win = $(window),
-            id = Date.now() + index,
-            height = elHeight(el);
+	      
+	      var 	dDate	=	new Date();
+          var 	el 		= 	$(this),
+            	win 	= 	$(window),
+            	id 		= 	((!Date.now) ? dDate.getTime():Date.now()) + index,
+            	height 	= 	elHeight(el);
             
           el.data('sticky-id', id);
           
